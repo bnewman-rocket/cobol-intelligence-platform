@@ -7,6 +7,10 @@ router = APIRouter()
 def health_check():
     return {"status": "running"}
 
+# @router.post("/analyze/system")
+# def analyze_system(programs: list[str]):
+#     return analyze(programs)
+
 @router.post("/analyze/system")
-def analyze_system(programs: list[str]):
-    return analyze(programs)
+def analyze_system(directory: str):
+    return analyze(directory)
